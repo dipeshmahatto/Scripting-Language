@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #banner{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+    <script>
+        // function show(){
+        //     var banner = document.getElementById("banner");
+        //     banner.style.display = "block";
+
+        // }
+        // function hide(){
+        //     var banner = document.getElementById("banner");
+        //     banner.style.display = "none";
+            
+        // }
+
+        // function both(){
+        //     var banner = document.getElementById("banner");
+        //     if(banner.style.display=="block"){
+        //         banner.style.display="none";
+        //     } else{
+        //         banner.style.display="block";
+        //     }
+        // }
+
+        function hover(){
+            var banner = document.getElementById("banner");
+            if(banner.style.display=="block"){
+                banner.style.display="none";
+            } else{
+                banner.style.display="block";
+            }
+        }
+
+        function color(){
+            var banner = document.getElementById("banner");
+            if(banner.style.backgroundColor=="green"){
+                banner.style.backgroundColor="red";
+            } else {
+                banner.style.backgroundColor="green";
+            }
+        }
+        
+    </script>   
+</head>
+<body>
+    <div id="banner" onmouseover="color()" onmouseout="color()">
+
+    </div>
+
+    <!--  <button id="show" onclick="show()">show</button> -->
+    <!-- <button id="hide" onclick="hide()">hide</button> -->
+    <!-- <button id="hide" onclick="both()">show--hide</button> -->
+    <button id="hide" onmouseover="hover()">show--hide</button>
+</body>
+</html>
