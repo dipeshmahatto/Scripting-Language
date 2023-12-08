@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class User{
+    constructor(email,pass){
+        this.email= email;
+        this.password=pass;
+    }
+    Validate(){
+        if(this.email==""||this.email==null){
+            alert("Email is empty")
+            
+        } 
+
+        if(this.password==""||this.password==null){
+            alert("Password is empty") 
+        } else if (this.password.length<6){
+            alert("Password is less than 6 characters")
+        }
+    }
+    
+}
+
+// let user = new User("","surya");
+// user.Validate();
+
+function display(){
+    var email = document.getElementById("email").value;
+    var pass = document.getElementById("password").value;  
+
+    let user = new User(email,pass);
+    user.Validate();
+}
+
+function ValidateEmail(){
+    var inputText = document.getElementById("email").value;
+    var mailformate = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if(inputText.match(mailformate)){
+        alert("Valid email address !");
+        return true;
+    } else {
+        alert("You have entered an invalid email address !");
+        return false;
+    }
+
+
+}
+    </script>
+</head>
+<body>
+    <form onsubmit="display(),ValidateEmail()">
+        <label for="email">Email : </label>
+        <input type="text" id="email"><br> <br>
+
+        <label for="password">Password : </label> 
+        <input type="text" id="password"> <br><br>
+        <input type="radio" name="gender" id="male">Male <br><br>
+        <input type="radio" name="gender" id="female"> Female <br><br>
+        <input type="submit" value="display"/>
+    </form>
+</body>
+</html>
