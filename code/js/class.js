@@ -17,8 +17,7 @@ class User{
     }
     Validate(){
         if(this.username==""||this.username==null){
-            alert("Username is empty")
-            
+            alert("Username is empty")  
         } 
 
         if(this.password==""||this.password==null){
