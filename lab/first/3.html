@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increment</title>
+</head>
+<body>
+    <h1 id="increase">0</h1>
+    <button onclick="increase()">increase</button>
+    
+    <script>
+        function increase() {
+            var element = document.getElementById("increase");
+            var currentValue = parseInt(element.innerHTML);
+            element.innerHTML = currentValue + 1;
+        }
+    </script> 
+</body>
+</html>

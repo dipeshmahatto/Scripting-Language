@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Change</title>
+</head>
+
+<body>
+    <input type="text" id="case"><br><br>
+    <button onclick="lowercase()">LowerCase</button>
+    <button onclick="uppercase()">Uppercase</button>
+
+    <script>
+        function lowercase() {
+            var input = document.getElementById("case");
+            input.value = input.value.toLowerCase();
+        }
+
+        function uppercase() {
+            var input = document.getElementById("case");
+            input.value = input.value.toUpperCase();
+        }
+    </script>
+</body>
+
+</html>

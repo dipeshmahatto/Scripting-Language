@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display name of the day</title>
+    <style>
+        button{
+            background-color: rgb(92, 234, 234);
+            padding: 10px;
+            border-radius: 10px;
+            width: 100px;
+            font-weight: bold;
+        }
+        input{
+            padding: 10px;
+            border: 3px solid black;
+        }
+        p{
+            color:rgb(6, 156, 6);
+        }
+    </style>
+</head>
+
+<body>
+    <label for="day">Number of Day of a week</label><br><br>
+    <input type="number" id="dayInput">
+    <button onclick="displayDay()">Check</button>
+    <p id="dayDisplay"></p>
+
+    <script>
+        function displayDay() {
+            var dayInput = document.getElementById("dayInput").value;
+            var dayOfWeek = "";
+            switch (parseInt(dayInput)) {
+                case 1:
+                    dayOfWeek = "Sunday";
+                    break;
+                case 2:
+                    dayOfWeek = "Monday";
+                    break;
+                case 3:
+                    dayOfWeek = "Tuesday";
+                    break;
+                case 4:
+                    dayOfWeek = "Wednesday";
+                    break;
+                case 5:
+                    dayOfWeek = "Thursday";
+                    break;
+                case 6:
+                    dayOfWeek = "Friday";
+                    break;
+                case 7:
+                    dayOfWeek = "Saturday";
+                    break;
+                default:
+                    dayOfWeek = "Invalid day";
+            }
+            document.getElementById("dayDisplay").textContent = "Name of the Day is " + dayOfWeek + ".";
+        }
+    </script>
+</body>
+
+</html>
