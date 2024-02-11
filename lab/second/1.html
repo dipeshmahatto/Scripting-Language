@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation box</title>
+</head>
+
+<body>
+    <button onclick="myConfirm()">confirm</button>
+    <p id="print"></p>
+    <script>
+        function myConfirm() {
+            var result = window.confirm("Do you want to continue?");
+            var print = document.getElementById("print");
+            if (result) {
+                print.textContent = "User clicked Ok";
+            } else {
+                print.textContent = "User clicked Cancel";
+            }
+        }
+    </script>
+</body>
+
+</html>
