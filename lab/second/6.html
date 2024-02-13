@@ -9,19 +9,16 @@
         background-color: aqua;
         width: 100px;
     }
-    .hidden {
-      display: none;
-    }
   </style>
 </head>
 <body>
 
-<div id="myDiv" onmouseover="hideDiv()">Hover over me to hide!</div>
+<div id="myDiv" onmouseover="hideDiv()">Hover me!</div>
 
 <script>
   function hideDiv() {
     const div = document.getElementById('myDiv');
-    div.classList.add('hidden');
+    div.style.display='none';
   }
 </script>
 
