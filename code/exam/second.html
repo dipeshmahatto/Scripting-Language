@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Preparation</title>
+</head>
+
+<body>
+    <form onsubmit="Sum()">
+        <label for="a">Enter the first number: </label>
+        <input type="text" id="a"><br><br>
+        <label for="b">Enter the second number: </label>
+        <input type="text" id="b"> <br> <br>
+        <input type="submit" value="Submit">
+        <div id="result"></div>
+    </form>
+</body>
+<script>
+
+    function Sum() {
+        var a = parseInt(document.getElementById("a").value);
+        var b = parseInt(document.getElementById("b").value);
+        var sum = a + b;
+        document.write(sum);
+        document.getElementById("result").textContent = sum;
+    }
+</script>
+
+</html>
