@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #rev{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="demo">
+        "The quick brown fox jumps over the lazy dog"
+    </p>
+    <button onclick="Replace()" id="rep">Click to replace</button>
+    <button onclick="Reverse()" id="rev">Reverse</button>
+    <script>
+        function Replace(){
+            var str = document.getElementById("demo").innerHTML;
+            var txt = str.replace(/quick/i,"slow");
+            document.getElementById("demo").innerHTML=txt;
+            document.getElementById("rev").style.display="block";
+            document.getElementById("rep").style.display="none";
+
+        }
+        function Reverse(){
+            var str = document.getElementById("demo").innerHTML;
+            var txt = str.replace(/slow/i,"quick");
+            document.getElementById("demo").innerHTML=txt;
+            document.getElementById("rep").style.display="block";
+            document.getElementById("rev").style.display="none";
+        }
+    </script>
+</body>
+
+</html>

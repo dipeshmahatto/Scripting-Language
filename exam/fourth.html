@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popups</title>
+</head>
+
+<body>
+    <script>
+        //alter box
+        alert("Are u ok !");
+        if (confirm("Are u really Ok.")) {
+            document.write("You pressed Ok");
+        } else {
+            document.write("You pressed cancel");
+        }
+
+        var name = prompt("Enter your name :- ");
+        if (name !== null && name.length > 0) {
+            document.write(name);
+        } else {
+            document.write("No name entered.");
+        }
+    </script>
+</body>
+
+</html>
