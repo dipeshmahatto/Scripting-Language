@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Reverse name</title>
+</head>
+
+<body>
+    <label for="firstname">First name: </label>
+    <input type="text" name="firstname" id="firstname"> <br><br>
+    <label for="lastname">Last name: </label>
+    <input type="text" name="lastname" id="lastname"><br><br>
+    <button onclick="reverse()">Reverse</button>
+    <p id="result"></p>
+    <script>
+        function reverse() {
+            var firstname = document.getElementById("firstname").value;
+            var lastname = document.getElementById("lastname").value;
+
+            // Join the names with a space
+            var name = firstname + ' ' + lastname;
+
+            // Reverse the entire string
+            var rev = name.split('').reverse().join('');
+            document.getElementById("result").textContent = "Reversed Name: " + rev;
+        }
+    </script>
+
+</body>
+
+</html>
