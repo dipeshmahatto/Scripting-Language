@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image description</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        img{
+            
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+    <script>
+        function monkey(){
+            document.getElementById("description").textContent="mouse is on image";
+        }
+        function person(){
+            document.getElementById("description").textContent="mouse isn't on image";
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <img src="sd.jpg" alt="" onmouseover="monkey()" onmouseout="person()">
+    </div>
+    <p id="description"></p>
+</body>
+
+</html>
